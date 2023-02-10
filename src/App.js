@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import "./App.css";
+import Dragndrop from "./components/Dragndrop";
+
+const App = () => {
+  const data = [
+    { title: "group-1", items: [1, 2, 3, 4] },
+    { title: "group-2", items: [5, 6, 7] },
+    { title: "group-3", items: [8, 9] },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="inner-container">
+        <Dragndrop data={data} />
+      </div>
     </div>
-  );
-}
+    );
+};
 
 export default App;
